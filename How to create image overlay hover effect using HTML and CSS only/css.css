@@ -1,0 +1,86 @@
+.title{
+    font-family: sans-serif;
+    color: #dc2d5e;
+}
+.container {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+}
+.image {
+    display: block;
+    width: 200px;
+    height: 200px;
+}
+.text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: sans-serif;
+}
+.overlayFade{
+    height: 100%;
+    width:100%;
+    top:0;
+    left:0;
+    background-color: #ff946bbd;
+}
+.overlay {
+    position: absolute;
+    opacity: 0;
+    transition:all .3s ease;
+    background-color: #008cba;
+    background-color: #ba007c80;
+}
+.container:hover .overlay,.container:hover .overlayFade {
+    opacity: 1;
+}
+.overlayLeft{
+    height: 100%;
+    width:0;
+    top:0;
+    left:0;
+    background-color: #ba007c80;
+}
+.overlayRight{
+    height: 100%;
+    width: 0;
+    top:0;
+    right:0;
+    background-color: #ba007c80;
+}
+.container:hover .overlayLeft ,.container:hover .overlayRight {
+    width: 100%;
+}
+.overlayTop{
+    width: 100%;
+    height: 0;
+    top:0;
+    left:0;
+    background-color: #ba007c80;
+}
+.overlayBottom{
+    width: 100%;
+    height: 0;
+    bottom:0;
+    left:0;
+    background-color: #ba007c80;
+}
+.container:hover .overlayTop ,.container:hover .overlayBottom {
+    height: 100%;
+}
+.overlayCross{
+    width: 0%;
+    height: 0;
+    top:0;
+    left:0;
+    background-color: #ba007c80;
+}
+.container:hover .overlayCross {
+    height: 100%;
+    width: 100%;
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            display: inline-block;
+        }
+        .image {
+            display: block;
+            width: 200px;
+            height: 200px;
+        }
+        .text {
+            color: white;
+            font-size: 20px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: sans-serif;
+        }
+        .overlay {
+            position: absolute;
+            opacity: 0;
+            transition:all .3s ease;
+            background-color: #008cba;
+            background-color: #ba007c80;
+        }
+        .container:hover .overlay{
+            opacity: 1;
+        }
+        .overlayCross{
+            width: 0%;
+            height: 0;
+            top:0;
+            left:0;
+            background-color: #ba007c80;
+        }
+        .container:hover .overlayCross {
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div align="center">
+        <div>
+            <div class="container">
+                <img src="download.png" alt="Avatar" class="image">
+                <div class="overlay overlayCross">
+                    <div class="text">Cross</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
